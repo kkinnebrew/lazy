@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Title</title>
+		<title>CTA Bus Helper</title>
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-		<link rel="stylesheet" type="text/css" href="default.css"></link>
-		<script type="text/javascript" src="map.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/default.css"></link>
+		<script type="text/javascript" src="js/map.js"></script>
 	</head>
 	<body>
+		<nav>
+			<img src="img/geolocation_icon.jpg" alt="Refresh Location" onclick="initialize()"/> &nbsp;&nbsp;&nbsp;
+			<select name="direction" id="direction">
+				<option value="north">North</option>
+				<option value="east">East</option>
+				<option value="south">South</option>
+				<option value="west">West</option>
+			</select>
+		</nav>
 		<div id="map"/>
 	</body>
 </html>
