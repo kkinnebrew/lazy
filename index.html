@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CTA Bus Helper</title>
+		<title>LAZY</title>
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -10,12 +10,12 @@
 	</head>
 	<body>
 		<nav>
-			<img src="img/geolocation_icon.jpg" alt="Refresh Location" onclick="initialize()"/> &nbsp;&nbsp;&nbsp;
+			<img id="refreshLocation" src="img/geolocation_icon.png" alt="Refresh Location" />
 			<select name="direction" id="direction">
-				<option value="north">North</option>
-				<option value="east">East</option>
-				<option value="south">South</option>
-				<option value="west">West</option>
+				<option value="northbound">Northbound</option>
+				<option value="eastbound">Eastbound</option>
+				<option value="southbound">Southbound</option>
+				<option value="westbound">Westbound</option>
 			</select>
 		</nav>
 		<div id="map"/>

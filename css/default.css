@@ -9,6 +9,10 @@ html, body {
   width:  100%;
 }
 
+#refreshLocation {
+  cursor: pointer;
+}
+
 @media print {
   html, body {
 
@@ -20,13 +24,17 @@ html, body {
 }
 
 nav {
-position: absolute;
-top: 10px;
-left: 100px;
-z-index: 999999;
-background: white;
-border:2px solid #a1a1a1;
-border-radius:25px;
-width: 130px;
-padding-left: 15px;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  z-index: 999999;
+  background: white;
+  border:1px solid #a1a1a1;
+  border-radius:25px;
+  width: 180px;
+  height: 45px;
+  padding-left: 15px;
+  -webkit-box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    1px 1px 5px rgba(50, 50, 50, 0.75);
+  box-shadow:         1px 1px 5px rgba(50, 50, 50, 0.75);
 }
