@@ -28,13 +28,19 @@
 			
 			var stopsList = $.ajax({
 				url: serviceURL,
-				type: "POST",
+				type: "GET",
 				data: { latitude: position.coords.latitude, 
 						longitude: position.coords.longitude }, 
 				dataType: "JSON"
 			})
-			.done(function(){
+			.done(function(returnData){
 				alert("SUCCESS");
+				
+				returnData.stops.each(function(index) {
+					var infowindow2 = new google.maps.InfoWindow(options);
+					var latlng2 = new google.maps.LatLng($(this).latitude, $(this).longitude);
+					createMarker(latlng2, $(this).stopName, $(this).routeDirection, infowindow2);
+				});
 			})
 			.fail(function(){
 				alert("FAILED");
@@ -42,14 +48,6 @@
 			.always(function(){
 				alert("COMPLETED");
 			})
-			
-			stopsList.each(function(index) {
-				var infowindow2 = new google.maps.InfoWindow(options);
-				var latlng2 = new google.maps.LatLng($(this).latitude, $(this).longitude);
-				createMarker(latlng2, $(this).stopName, $(this).routeDirection, infowindow2)
-			}
-			
-
 			
           }, function() {
             handleNoGeolocation(true);
