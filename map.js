@@ -11,6 +11,9 @@
 
         // Try HTML5 geolocation
         if(navigator.geolocation) {
+			
+			var serviceURL = "http://orangelit.com:8008/stops";
+			
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = new google.maps.LatLng(position.coords.latitude,
                                              position.coords.longitude);
@@ -22,6 +25,24 @@
             });
 
             map.setCenter(pos);
+			
+			var stopsList = $.ajax({
+				url: serviceURL,
+				type: "POST",
+				data: { latitude: position.coords.latitude, 
+						longitude: position.coords.longitude }, 
+				dataType: "JSON"
+			})
+			.done(function(){
+				alert("SUCCESS");
+			})
+			.fail(function(){
+				alert("FAILED");
+			})
+			.always(function(){
+				alert("COMPLETED");
+			})
+			
           }, function() {
             handleNoGeolocation(true);
           });
