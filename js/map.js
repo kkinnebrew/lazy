@@ -43,6 +43,14 @@
 				alert("COMPLETED");
 			})
 			
+			stopsList.each(function(index) {
+				var infowindow2 = new google.maps.InfoWindow(options);
+				var latlng2 = new google.maps.LatLng($(this).latitude, $(this).longitude);
+				createMarker(latlng2, $(this).stopName, $(this).routeDirection, infowindow2)
+			}
+			
+
+			
           }, function() {
             handleNoGeolocation(true);
           });
