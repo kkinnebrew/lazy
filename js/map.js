@@ -30,7 +30,7 @@ LazyApp = (function() {
         var marker = new google.maps.Marker({
           map: map,
           position: pos,
-          icon: "../img/marker.png"
+          icon: "img/marker.png"
         });
   
         map.setCenter(pos);
