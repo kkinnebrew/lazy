@@ -108,7 +108,8 @@ LazyApp = (function() {
   }
   
   function createMarker(latlng, name, direction, arrivalTime, infoWindow) {
-    var html = "<b>" + name + "</b> <br />Direction: " + direction + "<br />Arrives: " + arrivalTime;
+    var arrival = new Date(arrivalTime);
+    var html = "<b>" + name + "</b> <br />Direction: " + direction + "<br />Arrives: " + arrival.format('shortTime');
     var marker = new google.maps.Marker({
       map: map,
       position: latlng
