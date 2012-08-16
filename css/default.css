@@ -38,3 +38,9 @@ nav {
   -moz-box-shadow:    1px 1px 5px rgba(50, 50, 50, 0.75);
   box-shadow:         1px 1px 5px rgba(50, 50, 50, 0.75);
 }
+
+select {
+  position:absolute;
+  top:50%;
+  margin-top:-10px;
+}
