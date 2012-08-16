@@ -85,7 +85,7 @@ LazyApp = (function() {
         coords.push(initialLatLong);
         
         // Add markers for rest of route.
-        $.each(routeDirection.stops.nextStops, function() {
+        $.each(this.nextStops, function() {
           var nextStopLatLong = new google.maps.LatLng(this.latitude, this.longitude);
           createMarker(nextStopLatLong);
           coords.push(nextStopLatLong);
