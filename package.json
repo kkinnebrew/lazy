@@ -1,0 +1,22 @@
+{
+  "name": "Lazy Bus Tracker",
+  "description": "Find CTA buses nearby",
+  "version": "0.1.0",
+  "contributors": [
+    { "name": "Aj Liptak" },
+    { "name": "Chris Miller" },
+    { "name": "Dinesh Banda" },
+    { "name": "Greg Gammon" },
+    { "name": "Kevin Kinnebrew" },
+    { "name": "Paul Grunchich" }
+  ],
+  "homepage": "http://www.westmonroepartners.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brew20k/lazy"
+  },
+  "dependencies": {
+    "mongodb": "*"
+  },
+  "devDependencies": {}
+}
