@@ -30,7 +30,8 @@ LazyApp = (function() {
         var marker = new google.maps.Marker({
           map: map,
           position: pos,
-          icon: "img/marker.png"
+          icon: "img/marker.png",
+          animation: google.maps.Animation.DROP
         });
   
         map.setCenter(pos);
@@ -100,7 +101,8 @@ LazyApp = (function() {
   function createMarker(latlng) {
     var marker = new google.maps.Marker({
       map: map,
-      position: latlng
+      position: latlng,
+      animation: google.maps.Animation.DROP
     });
     markersArray.push(marker);
   }
